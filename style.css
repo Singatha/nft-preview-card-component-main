@@ -1,0 +1,165 @@
+:root {
+    --fs: 18px;
+    --ff: "Outfit";
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --main-very-dark-blue: hsl(217, 54%, 11%); /*(main BG)*/
+    --card-very-dark-blue: hsl(216, 50%, 16%); /*(card BG)*/
+    --line-very-dark-blue: hsl(215, 32%, 27%); /*(line)*/
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: var(--main-very-dark-blue);
+}
+
+.container {
+    background-color: var(--card-very-dark-blue);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    position: relative;
+    top: 5%;
+}
+
+.image {
+    position: relative;
+}
+
+.main-image {
+    border-radius: 10px;
+    display: block;
+    max-width: 280px;
+    width: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.svg {
+    display: none;
+    visibility: hidden;
+}
+
+.overlay {
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--cyan);
+    opacity: 0.5;
+    width: 280px;
+    height: 280px;
+    display: none;
+    top: 7%;
+    left: 6%;
+}
+
+.container:hover .overlay {
+    display: block;
+}
+
+.container:hover .svg {
+    display: inline;
+    visibility: visible;
+    position: absolute;
+    top: 42%;
+    right: 40%;
+    left: 43%;
+    bottom: 45%; 
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.head {
+    font-family: var(--ff);
+    font-size: var(--fs);
+    font-weight: var(--fw-600);
+    color: var(--white);
+}
+
+.head:hover {
+    color: var(--cyan);
+}
+
+.descr {
+    font-family: var(--ff);
+    font-size: var(--fs);
+    color: var(--soft-blue);
+    margin: 0;
+}
+
+.cyan {
+    font-weight: var(--fw-400);
+    font-family: var(--ff);
+    font-size: var(--fs);
+    color: var(--cyan);
+    margin-left: 10px;
+}
+
+.days {
+    font-weight: 300;
+    font-family: var(--ff);
+    font-size: var(--fs);
+    color: var(--soft-blue);
+    margin-left: 10px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.avatar p {
+    font-weight: var(--fw-300);
+    font-family: var(--ff);
+    font-size: var(--fs);
+    color: var(--soft-blue);
+    margin-left: 20px;
+}
+
+.icon img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.avatar span {
+    font-family: var(--ff);
+    color: var(--white);
+}
+
+span:hover {
+    color: var(--cyan);
+}
