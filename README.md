@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Challenge Screenshot](./nft-component-screenshot.jpg)
+![Challenge Screenshot](./nft-component-screenshot.png)
 
 ### Links
 
