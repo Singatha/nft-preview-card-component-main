@@ -15,26 +15,24 @@
     --white: hsl(0, 0%, 100%);
 }
 
-html {
+html, body {
     height: 100%;
 }
+
 body {
-    height: 100%;
+    align-items: center;
     background-color: var(--main-very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container {
     background-color: var(--card-very-dark-blue);
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
     max-width: 320px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    align-content: center;
-    position: relative;
-    top: 5%;
 }
 
 .image {
@@ -45,10 +43,8 @@ body {
     border-radius: 10px;
     display: block;
     max-width: 280px;
+    margin: 20px auto 0;
     width: auto;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .svg {
@@ -57,15 +53,14 @@ body {
 }
 
 .overlay {
-    position: absolute;
-    border-radius: 10px;
     background-color: var(--cyan);
-    opacity: 0.5;
-    width: 280px;
-    height: 280px;
+    border-radius: 10px;
     display: none;
-    top: 7%;
+    height: 280px;
     left: 6%;
+    opacity: 0.5;
+    position: absolute;
+    width: 280px;
 }
 
 .container:hover .overlay {
@@ -73,19 +68,19 @@ body {
 }
 
 .container:hover .svg {
-    display: inline;
-    visibility: visible;
-    position: absolute;
-    top: 42%;
-    right: 40%;
-    left: 43%;
     bottom: 45%; 
+    display: inline;
+    left: 43%;
+    position: absolute;
+    right: 40%;
+    top: 42%;
+    visibility: visible;
 }
 
 .row {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .rows {
@@ -95,69 +90,73 @@ body {
 }
 
 .text {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
-.head {
+h1 {
+    color: var(--white);
     font-family: var(--ff);
     font-size: var(--fs);
     font-weight: var(--fw-600);
-    color: var(--white);
 }
 
-.head:hover {
+h1:hover {
     color: var(--cyan);
 }
 
-.descr {
-    font-family: var(--ff);
-    font-size: var(--fs);
+.image-description {
     color: var(--soft-blue);
+    font-family: var(--ff);
     margin: 0;
 }
 
 .cyan {
+    color: var(--cyan);
     font-weight: var(--fw-400);
     font-family: var(--ff);
     font-size: var(--fs);
-    color: var(--cyan);
     margin-left: 10px;
 }
 
 .days {
+    color: var(--soft-blue);
     font-weight: 300;
     font-family: var(--ff);
     font-size: var(--fs);
-    color: var(--soft-blue);
     margin-left: 10px;
 }
 
-.avatar {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-bottom: 10px;
+hr {
+    border-width: 1px 0 0;
+    color: var(--soft-blue);
+    margin: 0;
 }
 
-.avatar p {
-    font-weight: var(--fw-300);
+.avatar {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+}
+
+.name {
+    color: var(--soft-blue);
     font-family: var(--ff);
     font-size: var(--fs);
-    color: var(--soft-blue);
-    margin-left: 20px;
+    font-weight: var(--fw-300);
+    margin: 0 0 0 20px;
 }
 
-.icon img {
-    width: 30px;
-    height: 30px;
+.avatar img {
     border: 1px solid var(--white);
     border-radius: 50%;
+    height: 30px;
+    width: 30px;
 }
 
 .avatar span {
-    font-family: var(--ff);
     color: var(--white);
+    font-family: var(--ff);
 }
 
 span:hover {
